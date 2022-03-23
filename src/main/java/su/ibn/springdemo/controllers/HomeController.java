@@ -26,8 +26,6 @@ public class HomeController {
     }
 
 
-
-
     @GetMapping
     public String getIndex(@NotNull Model model) {
         model.addAttribute("books", bookRepository.findAll());
@@ -40,6 +38,5 @@ public class HomeController {
         bookRepository.save(book);
         return "redirect:/";
     }
-
 
 }
