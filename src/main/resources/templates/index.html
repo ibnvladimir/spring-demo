@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
-<center>
+<div class="container center">
+<div class="container center">
 <h3>List of Books</h3>
     <form action="#" th:action="@{/}" th:object="${newBook}" method="post">
         <input type="text" th:field="*{name}" placeholder="name"/>
         <input type="text" th:field="*{author}" placeholder="author"/>
-        <input type="submit" value="create new book"/>
-        <input type="reset" value="reset"/>
+        <input type="submit" value="create new book" class="btn btn-primary green"/>
+        <input type="reset" value="reset" class="btn btn-primary red"/>
     </form>
-</center>
+</div>
 
 <table class="centered">
     <thead>
@@ -30,5 +31,6 @@
     </tr>
     </tbody>
 </table>
+</div>
 </body>
 </html>
